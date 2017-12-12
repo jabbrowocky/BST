@@ -6,7 +6,31 @@ using System.Threading.Tasks;
 
 namespace BST
 {
-    class Node
+    public class Node
     {
+        int data;
+        public Node left;
+        public Node right;
+        public int Data
+        {
+            get
+            {
+                return data;
+            }
+            set
+            {
+                data = value;
+            }
+        }
+
+        public Node()
+        {
+
+        }
+        public Node(int data)
+        {
+            this.data = data;
+        }
+        
     }
 }

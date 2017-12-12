@@ -22,23 +22,23 @@ namespace BST
             {
                 head = toAdd;
                 return;
-            }
-            if (current.Data == toAdd.Data)
-            {
-                Console.WriteLine("{0} already exists", current.Data);
-                return;
-            }
+            }            
             while (current != null)
             {
+                if (current.Data == toAdd.Data)
+                {
+                    Console.WriteLine("{0} already exists", current.Data);
+                    return;
+                }
                 if (current.Data < toAdd.Data)
                 {
+
                     if (current.right == null)
                     {
                         current.right = toAdd;
                         return;
                     }
                     current = current.right;
-
                 }
                 else if (current.Data > toAdd.Data)
                 {
@@ -49,7 +49,7 @@ namespace BST
                     }
                     current = current.left;
                 }
-            }
+            }            
         }
         public bool SearchNode(int toCheck)
         {

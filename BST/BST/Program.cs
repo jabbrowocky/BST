@@ -19,7 +19,7 @@ namespace BST
             searchy.Add(65);
             searchy.Add(62);
             
-            Console.WriteLine(searchy.SearchNode(62));
+            Console.WriteLine(searchy.SearchNode(65));
             Console.ReadKey();
         }
     }

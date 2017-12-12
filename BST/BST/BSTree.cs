@@ -54,25 +54,45 @@ namespace BST
         public bool SearchNode(int toCheck)
         {
             Node current = head;
-            
+            List<string> pathLog = new List<string>();
             while (current != null)
             {
                 if (current.Data == toCheck)
                 {
+                    Console.WriteLine(PrintPathDirections(pathLog));
                     return true;
                 }
                 else if (current.Data < toCheck)
                 {
                     current = current.right;
+                    pathLog.Add("right");
                 }
                 else if (current.Data > toCheck)
                 {
                     current = current.left;
+                    pathLog.Add("left");
                 }
                 
             }
             return false;
 
         }
+        private string PrintPathDirections(List <string> pathLog)
+        {
+            StringBuilder pathString = new StringBuilder();
+            for (int i = 0; i < pathLog.Count; i++)
+            {
+                if (i == pathLog.Count - 1)
+                {
+                    pathString.Append(pathLog[i]);
+                }
+                else
+                {
+                    pathString.Append(pathLog[i] + " ");
+                }
+            }
+            return pathString.ToString();
+        }
+
     }
 }

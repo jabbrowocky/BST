@@ -15,8 +15,11 @@ namespace BST
             searchy.Add(22);
             searchy.Add(75);
             searchy.Add(15);
+            searchy.Add(100);
+            searchy.Add(65);
+            searchy.Add(62);
             
-            Console.WriteLine(searchy.SearchNode(15));
+            Console.WriteLine(searchy.SearchNode(62));
             Console.ReadKey();
         }
     }
